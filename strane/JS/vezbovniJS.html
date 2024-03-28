@@ -10,6 +10,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="/funkcije.js"></script>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
@@ -107,7 +108,10 @@
             <button class="btn btn-primary" onclick="document.getElementById('moni').innerHTML=''" >brisi tekst</button>
         </div>
         <div class="col-6" style="background-color: burlywood;">
-           
+          <h2>funkcije</h2>
+          <button class="btn btn-primary" onclick="document.getElementById('zbir').innerHTML=zbir1(2,5)" >saberi</button>
+          <p id="zbir"></p>
+          <input type="number" name="br1" id="br1" value="55">
         </div>
         <div class="col-3 " style="background-color: blueviolet;">
             <p class="text-center">cetvrtak</p>
