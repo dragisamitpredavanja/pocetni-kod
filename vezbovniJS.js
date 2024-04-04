@@ -8,5 +8,5 @@ function saberi() {
    let broj2=Number(document.getElementById('br2').value);
    console.log(typeof broj1)
    let zbir=broj1+broj2
-   alert('zbir='+zbir)
+   alert('zbir=='+zbir)
 }
