@@ -10,13 +10,14 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/vezbovniJS.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg" style="background-color: #80aaff">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="slike/leptir.png" alt="" height="40px" />
+        <a class="navbar-brand" href="/index.html">
+          <img src="/slike/leptir.png" alt="" height="40px" />
         </a>
         <button
           class="navbar-toggler"
@@ -32,7 +33,9 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="/index.html"
+                >Home</a
+              >
             </li>
 
             <li class="nav-item dropdown">
@@ -64,10 +67,12 @@
                 CSS
               </a>
               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Flex</a></li>
                 <li>
-                  <a class="dropdown-item" href="strane/CSS/flex.html">Flex</a>
+                  <a class="dropdown-item" href="/strane/CSS/gridBS.html"
+                    >GridBS</a
+                  >
                 </li>
-                <li><a class="dropdown-item" href="/strane/CSS/gridBS.html">GridBS</a></li>
                 <li>
                   <a class="dropdown-item" href="#">Something else here</a>
                 </li>
@@ -84,7 +89,12 @@
                 JS
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/strane/JS/veybovniJS.html">VezbovniJS</a></li>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li>
+                  <a class="dropdown-item" href="/strane/JS/veybovniJS.html"
+                    >VezbovniJS</a
+                  >
+                </li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li>
                   <a class="dropdown-item" href="#">Something else here</a>
@@ -96,25 +106,41 @@
       </div>
     </nav>
     <!-- kraj navigacije -->
-    <div style="border: 5px solid green; display: flex">
-      <div style="background-color: aqua; width: 50%; height: 85vh">
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/tHlJAPa55E0?si=N_64IlW2sJb2bath"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div style="background-color: chocolate; width: 50%">
-        <video width="100%" height="100%" controls>
-          <source src="/video/sed1.mp4" type="video/mp4">
-        </video>
+
+    <div class="container-lg" style="border: 5px solid red">
+      <div class="row">
+        
+        <div
+          class="col-4"
+          style="background-color: rgb(104, 183, 90); height: 85vh"
+        >
+        <p id="moni"></p>
+          <button onclick="alert('Zdravo!!!!!!')">pozdrav</button>
+          <button
+            class="btn btn-primary"
+            onclick="document.getElementById('moni').innerHTML='Vrati se Moni vrati nedaj da srce pati'"
+          >
+            prikazi tekst
+          </button>
+          <button
+            class="btn btn-primary"
+            onclick="document.getElementById('moni').innerHTML=''"
+          >
+            brisi tekst
+          </button>
+        </div>
+        <div class="col-4" style="background-color: blueviolet" id="kut2">
+        <input type="number" name="br1" id="br1">
+        <input type="number" name="br2" id="br2">
+        <button type="button" class="btn btn-primary" onclick="saberi()" >saberi</button>
+        
+        </div>
+        <div class="col-4" style="background-color: chartreuse">
+       <input type="color" name="boja" id="boja">
+       <button type="button" class="btn btn-success" onclick="oboji()">oboji kon 2</button>
+        </div>
       </div>
     </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
