@@ -107,14 +107,15 @@
             <button class="btn btn-primary" onclick="document.getElementById('moni').innerHTML='Vrati se Moni vrati nedaj da srce pati'" >dodaj tekst</button>
             <button class="btn btn-primary" onclick="document.getElementById('moni').innerHTML=''" >brisi tekst</button>
         </div>
-        <div class="col-6" style="background-color: burlywood;">
+        <div class="col-6" style="background-color: burlywood;" id="kon2">
           <h2>funkcije</h2>
           <button class="btn btn-primary" onclick="document.getElementById('zbir').innerHTML=zbir1(2,5)" >saberi</button>
           <p id="zbir"></p>
           <input type="number" name="br1" id="br1" value="55">
         </div>
         <div class="col-3 " style="background-color: blueviolet;">
-            <p class="text-center">cetvrtak</p>
+            <input type="color" name="boja" id="boja">
+            <button type="button" class="btn btn-success" onclick="oboji()">oboji kon2</button>
         </div>
       </div>
      
