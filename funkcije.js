@@ -30,3 +30,32 @@ function farenfajdToCelzijus(tf) {
     document.getElementById('cel2').innerHTML=tc+' C'
     
 }
+function dinarUstraneValute(kv,ud) {
+    let iznos=ud/kv
+    
+    document.getElementById('kes').innerHTML=iznos
+}
+function napraviIzbor(iz) {
+    console.log(iz)
+    switch (iz) {
+        case '1':
+            // console.log(iz)
+            document.getElementById('sv').innerHTML=' Eura'
+            document.getElementById('upk').innerHTML=' Eura'
+            break;
+    
+        case '2':
+            document.getElementById('sv').innerHTML=' Dolara'
+            document.getElementById('upk').innerHTML=' Dolara'
+            break;
+    
+        case '3':
+            document.getElementById('sv').innerHTML=' Svajcaraca'
+            document.getElementById('upk').innerHTML=' Svajcaraca'
+            break;
+    
+        default:
+            break;
+    }
+    
+}
