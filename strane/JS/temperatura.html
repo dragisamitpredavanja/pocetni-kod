@@ -88,7 +88,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/strane/JS/vezbovniJS.html">VezbovniJS</a></li>
-                <li><a class="dropdown-item" href="/strane/JS/temperatura.html">Temperature</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li>
                   <a class="dropdown-item" href="/strane/JS/menjacnica.html">Menjacnica</a>
                 </li>
@@ -99,26 +99,25 @@
       </div>
     </nav>
     <!-- kraj navigacije -->
-    <div class="container-fluid" style="border: 5px solid green; ">
-      <div class="row">
-        <div class="col-3" style="background-color: aquamarine;padding: 50px;">
-            <p id="moni"></p>
-            <button onclick="alert('kafa!!!!')">dugme1</button>
-            <button class="btn btn-primary" onclick="document.getElementById('moni').innerHTML='Vrati se Moni vrati nedaj da srce pati'" >dodaj tekst</button>
-            <button class="btn btn-primary" onclick="document.getElementById('moni').innerHTML=''" >brisi tekst</button>
-        </div>
-        <div class="col-6" style="background-color: burlywood;">
-          <h2>funkcije</h2>
-          <button class="btn btn-primary" onclick="document.getElementById('zbir').innerHTML=zbir1(2,5)" >saberi</button>
-          <p id="zbir"></p>
-          <input type="number" name="br1" id="br1" value="55">
-        </div>
-        <div class="col-3 " style="background-color: blueviolet;">
-            <p class="text-center">cetvrtak</p>
+    <div class="container-fluid" style="border: 5px solid green;">
+        <div class="row">
+          <div class="col-6" style="background-color: aqua;padding: 40px;">
+            <label for="cel">Unesi temperaturu u C:</label>
+            <input type="number" name="cel" id="cel" oninput="celzijusToFarenhajd(Number(document.getElementById('cel').value))" ><br>
+           <button class="btn btn-primary" style="margin-left: 170px;margin-top: 20px;" onclick="celzijusToFarenhajd(Number(document.getElementById('cel').value))">Pretvori u Far</button><br><br>
+           <label for="">Farenhajda:</label>
+           <p id="far"></p>
+          </div>
+          <div class="col-6" style="background-color: chartreuse;padding: 40px;">
+    
+              <label for="far">Unesi temperaturu u F:</label>
+              <input type="number" name="far" id="far2"><br>
+              <button class="btn btn-primary" style="margin-left: 170px;margin-top: 20px;" onclick="farenfajdToCelzijus(Number(document.getElementById('far2').value))">Pretvori u Cel</button><br><br>
+              <label for="">Celzijusa:</label>
+              <p id="cel2"></p>
+          </div>
         </div>
       </div>
-     
-    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
