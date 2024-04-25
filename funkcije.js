@@ -35,6 +35,12 @@ function dinarUstraneValute(kv,ud) {
     
     document.getElementById('kes').innerHTML=iznos
 }
+function stranaValutaUdin(kd,isv) {
+   
+    let iznos2=kd*isv
+    
+    document.getElementById('kes2').innerHTML=iznos2
+}
 function napraviIzbor(iz) {
     console.log(iz)
     switch (iz) {
@@ -52,6 +58,30 @@ function napraviIzbor(iz) {
         case '3':
             document.getElementById('sv').innerHTML=' Svajcaraca'
             document.getElementById('upk').innerHTML=' Svajcaraca'
+            break;
+    
+        default:
+            break;
+    }
+    
+}
+function napraviIzbor2(iz) {
+    console.log(iz)
+    switch (iz) {
+        case '1':
+            // console.log(iz)
+            // document.getElementById('sv').innerHTML=' Eura'
+            document.getElementById('ukk').innerHTML=' Eura'
+            break;
+    
+        case '2':
+            // document.getElementById('sv').innerHTML=' Dolara'
+            document.getElementById('ukk').innerHTML=' Dolara'
+            break;
+    
+        case '3':
+            // document.getElementById('sv').innerHTML=' Svajcaraca'
+            document.getElementById('ukk').innerHTML=' Svajcaraca'
             break;
     
         default:

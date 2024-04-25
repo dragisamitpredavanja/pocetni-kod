@@ -132,12 +132,7 @@
             </div>
             <div class="col-6">
               <input type="number" name="pk" id="pk" /><br /><br />
-              <input
-                type="number"
-                name="din"
-                id="din"
-                
-              /><br /><br />
+              <input type="number" name="din" id="din" /><br /><br />
             </div>
           </div>
 
@@ -151,18 +146,40 @@
           <label for="">Ukupno <span id="sv"></span>:</label>
           <p id="kes"></p>
         </div>
+        <!-- desna strana -->
         <div class="col-6" style="background-color: chartreuse; padding: 40px">
-          <label for="far">Unesi temperaturu u F:</label>
-          <input type="number" name="far" id="far2" /><br />
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            style="width: 150px; margin-left: 175px; margin-bottom: 20px"
+            id="izbor2"
+            onclick="napraviIzbor2(document.getElementById('izbor2').value)"
+          >
+            <option selected>Izaberi valutu</option>
+            <option value="1">EUR</option>
+            <option value="2">USD</option>
+            <option value="3">CHF</option>
+          </select>
+          <div class="row">
+            <div class="col-6">
+              <label for="cel">Unesi kupovni kurs DIN:</label><br /><br />
+              <label for="cel">Unesi iznos <span id="ukk"></span> :</label>
+            </div>
+            <div class="col-6">
+              <input type="number" name="ukk2" id="ukk2" /><br /><br />
+              <input type="number" name="sv2" id="sv2" /><br /><br />
+            </div>
+          </div>
+
           <button
             class="btn btn-primary"
             style="margin-left: 170px; margin-top: 20px"
-            onclick="farenfajdToCelzijus(Number(document.getElementById('far2').value))"
+            onclick="stranaValutaUdin(Number(document.getElementById('ukk2').value),Number(document.getElementById('sv2').value))"
           >
-            Pretvori u Cel</button
+            Konvertuj</button
           ><br /><br />
-          <label for="">Celzijusa:</label>
-          <p id="cel2"></p>
+          <label for="">Ukupno Dinara:</label>
+          <p id="kes2"></p>
         </div>
       </div>
     </div>
